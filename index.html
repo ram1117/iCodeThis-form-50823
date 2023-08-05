@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-purple flex justify-center flex-col items-center ">
+    <div class="bg-light-white flex justify-center flex-col items-center min-h-screen w-full md:w-4/5">
+        <div class="bg-white shadow-md w-4/5 px-6 py-16 relative my-12 md:my-0">
+            <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+                <div class="flex flex-col justify-center align-center text-center">
+                    <span class="material-icons material-symbols-outlined md-dark  py-0.5">home</span>
+                    <p class="text-xs text-dark py-0.5">TYPE OF DWELLING</p>
+                    <p id="text-dwelling-type" class="text-sm font-semibold"></p>
+                </div>
+                <div class="flex flex-col justify-center align-center text-center">
+                    <span class="material-icons material-symbols-outlined md-dark py-0.5">crop</span>
+                    <p class="text-xs text-dark py-0.5">LIVING AREA</p>
+                    <p id="text-total-area" class="text-sm font-semibold"></p>
+                </div>
+                <div class="flex flex-col justify-center align-center text-center">
+                    <span class="material-icons material-symbols-outlined md-dark py-0.5">attach_money</span>
+                    <p class="text-xs text-dark py-0.5">CONSIDERED TO SOLD WITHIN</p>
+                    <p id="text-total-years" class="text-sm font-semibold"></p>
+                </div>
+            </div>
+            <button class="absolute right-12 -bottom-5 btn-green-color rounded-full">
+                    <span class="material-symbols-outlined p-4">stylus</span>
+                </button>
+        </div>
+
+        <div class="bg-dark-blue shadow-md w-4/5 my-12 px-6 py-16 relative">
+            <div class="w-1/2 mx-auto text-center">
+                <h6 class="text-light text-sm font-bold mb-3">Edit</h6>
+                <p class="text-light text-xs">Enter details and let other users know when you are considering selling
+                    the
+                    property</p>
+            </div>
+            <form action="" id="edit-form">
+                <div class="grid grid-cols-1 md:grid-cols-3 my-12 ">
+                    <div class="text-center">
+                        <span class="material-icons material-symbols-outlined md-light  py-0.5">home</span>
+                        <p class="text-xs text-dark py-0.5 text-light">TYPE OF DWELLING</p>
+                        <select name="dwelltype" id="ip-dwell-type" class="w-3/5  p-0.5 my-2">
+                        <option value="Detached" selected>Detached</option>
+                        <option value="Semi-detached">Semi-Detached</option>
+                        <option value="Apartment">Apartment</option>
+                        <option value="Condo">Condo</option>
+                        <option value="Villa">Villa</option>
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <span class="material-icons material-symbols-outlined md-light py-0.5">crop</span>
+                        <p class="text-xs text-dark py-0.5 text-light">LIVING AREA</p>
+                        <div class="w-3/5 p-0.5 mx-auto my-2 flex flex-row">
+                            <input type="number" id="ip-total-area"  class="w-full px-2">
+                            <label for="ip-total-area" class="text-xs bg-white text-black-500 p-1.5">m2</span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <span class="material-icons material-symbols-outlined md-light py-0.5">attach_money</span>
+                            <p class="text-xs text-dark py-0.5 text-light">CONSIDERED TO SOLD WITHIN</p>
+                            <select name="total-years" id="ip-total-years"  class="w-3/5 p-0.5 my-2" >
+                            <option value="1 year" selected>1 Year</option>
+                            <option value="2 years">2 years</option>
+                            <option value="3 years">3 years</option>
+                            <option value=">3 years">>3 years</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="w-2/3 mx-auto flex justify-center">
+                        <button type="reset" class="w-2/5 p-2 mx-1 text-light border text-sm">Cancel</button>
+                        <button type="submit" class="w-2/5 p-2.5 mx-1 btn-green-color text-sm">Save</button>
+                    </div>
+                </form>
+                <button class="absolute right-12 -bottom-5 bg-white rounded-full shadow-md">
+                    <span class="material-symbols-outlined p-4">close</span>
+                </button>
+            </div>
+            <p id="success-msg" class="text-center text-green-500 hidden"></p>
+            <p id="error-msg" class="text-center text-red-500 hidden"></p>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
