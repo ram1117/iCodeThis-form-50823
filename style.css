@@ -1,0 +1,57 @@
+/* Add CSS here */
+.maaterial-icons {
+  stroke-width: 10px;
+}
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 0.54);
+}
+.text-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+.text-light {
+  color: rgba(255, 255, 255, 0.54);
+}
+.bg-light-white {
+  background: #f7f8fc;
+}
+.bg-dark-blue {
+  background: #0f1623;
+}
+.bg-purple {
+  background: #2c2446;
+}
+.btn-green-color {
+  background-color: #32a3a0;
+  color: #fff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.window-hidden {
+  opacity: 0;
+}
+
+.window-show {
+  animation: disappear forwards 1s linear;
+}
+
+@keyframes disappear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
