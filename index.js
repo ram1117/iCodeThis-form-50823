@@ -18,8 +18,7 @@ ipArea.value = formData.area;
 const ipYears = document.getElementById('ip-total-years');
 
 ipDwelling.onchange = (event) => {
-  console.log(event.target.value);
-    formData = { ...formData, type: `${event.target.value}` }
+    formData = { ...formData, type: event.target.value }
 }
 
 ipArea.onchange = (event) => {
@@ -34,11 +33,12 @@ const editForm = document.getElementById('edit-form');
 editForm.onsubmit = (event) => {
     event.preventDefault();
     if (ipArea.value < 0) {
-        showMessage("error","Please enter value greater than 0")
+        showMessage(errorMsg, "Please enter Area value greater than 0")
     }
-    else { 
-      console.log(formData);
+    else {
         updateData(formData);
+        showMessage(successMsg, "Updated successfully!!!");
+        closeEditWindow();
     }
 };
 
@@ -48,21 +48,35 @@ const updateData = (data) => {
     textYears.innerText = data.years
 }
 
-const showMessage = (type, msg) => {
-    if (type === 'success') {
-        successMsg.classList.toggle('hidden');
-        successMsg.textContent = msg;
-        setTimeout(() => {
-            successMsg.classList.toggle('hidden');
-        }, 2000);
-    }
-    else {
-        errorMsg.classList.toggle('hidden');
-        errorMsg.textContent = msg;
-        setTimeout(() => {
-            errorMsg.classList.toggle('hidden');
-        }, 2000);
-    }
+const showMessage = (element, msg) => {
+    element.classList.toggle('hidden');
+    element.textContent = msg;
+    setTimeout(() => {
+        element.classList.toggle('hidden');
+    }, 2000);
+
+}
+
+const editBtn = document.getElementById('edit-btn');
+const closeBtn = document.getElementById('close-btn');
+
+const editWindow = document.getElementById('edit-window');
+const showEditWindow = () => { 
+    editWindow.classList.remove('window-hidden');
+    editWindow.classList.add('window-show')
+}
+
+const closeEditWindow = () => { 
+    editWindow.classList.add('window-hidden');
+    editWindow.classList.remove('window-show')
+}
+
+editBtn.onclick = () => { 
+    showEditWindow();
+}
+
+closeBtn.onclick = () => { 
+    closeEditWindow();
 }
 
 updateData(formData);

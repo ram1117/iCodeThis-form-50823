@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,12 +28,12 @@
                     <p id="text-total-years" class="text-sm font-semibold"></p>
                 </div>
             </div>
-            <button class="absolute right-12 -bottom-5 btn-green-color rounded-full">
+            <button id="edit-btn" class="absolute right-12 -bottom-5 btn-green-color rounded-full">
                     <span class="material-symbols-outlined p-4">stylus</span>
                 </button>
         </div>
 
-        <div class="bg-dark-blue shadow-md w-4/5 my-12 px-6 py-16 relative">
+        <div id="edit-window" class="bg-dark-blue shadow-md w-4/5 my-12 px-6 py-16 relative window-hidden">
             <div class="w-1/2 mx-auto text-center">
                 <h6 class="text-light text-sm font-bold mb-3">Edit</h6>
                 <p class="text-light text-xs">Enter details and let other users know when you are considering selling
@@ -78,13 +77,14 @@
                         <button type="submit" class="w-2/5 p-2.5 mx-1 btn-green-color text-sm">Save</button>
                     </div>
                 </form>
-                <button class="absolute right-12 -bottom-5 bg-white rounded-full shadow-md">
+                <button id="close-btn" class="absolute right-12 -bottom-5 bg-white rounded-full shadow-md">
                     <span class="material-symbols-outlined p-4">close</span>
                 </button>
             </div>
-            <p id="success-msg" class="text-center text-green-500 hidden"></p>
-            <p id="error-msg" class="text-center text-red-500 hidden"></p>
+            <p id="success-msg" class="text-center my-10 text-green-500 hidden"></p>
+            <p id="error-msg" class="text-center my-10 text-red-500 hidden"></p>
 </div>
 <script src="index.js"></script>
 </body>
+
 </html>

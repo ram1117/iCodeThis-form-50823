@@ -39,10 +39,19 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.hidden {
-  display: none;
+.window-hidden {
+  opacity: 0;
 }
 
-.show {
-  display: block;
+.window-show {
+  animation: disappear forwards 1s linear;
+}
+
+@keyframes disappear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
